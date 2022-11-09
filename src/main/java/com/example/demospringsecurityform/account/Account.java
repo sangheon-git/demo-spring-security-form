@@ -3,6 +3,7 @@ package com.example.demospringsecurityform.account;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -46,6 +47,7 @@ public class Account {
     @GeneratedValue
     private Integer id;
 
+    @Column(unique = true)
     private String username;
 
     private String password;
